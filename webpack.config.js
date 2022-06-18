@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("path");
 
 const { NODE_ENV } = process.env;
-const PREFIX = NODE_ENV === "production" ? "/otus--hw36-router" : "/";
+const PREFIX = NODE_ENV === "production" ? "/otus--hw39-calendar" : "/";
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 

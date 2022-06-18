@@ -1,0 +1,73 @@
+{
+  "name": "otus--hw39-calendar",
+  "version": "1.0.0",
+  "description": "> ##### Домашнее задание курса **[JavaScript Developer. Basic](https://otus.ru/lessons/javascript-basic/?int_source=courses_catalog&int_term=programming)** > > ![Coverage](https://github.com/lliriq77/otus--hw33-redux/actions/workflows/coverage.yml/badge.svg)![PR Sanity Check](https://github.com/lliriq77/otus--hw33-redux/actions/workflows/sanity-check.yml/badge.svg)",
+  "main": "index.ts",
+  "scripts": {
+    "build": "webpack build --node-env production",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.ts & prettier --check . & tsc --noEmit",
+    "lint:fix": "eslint . --fix --ext .js,.ts & prettier --write .",
+    "prepare": "husky install",
+    "dev": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lliriq77/otus--hw36-router.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lliriq77/otus--hw36-router/issues"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/lliriq77/otus--hw36-router#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.7",
+    "@reduxjs/toolkit": "^1.8.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@types/fuzzy-search": "^2.1.2",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "babel-jest": "^27.4.2",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.3.0",
+    "firebase": "^9.6.11",
+    "fuzzy-search": "^3.2.1",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.3",
+    "lint-staged": "^11.2.6",
+    "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "prettier": "^2.5.0",
+    "redux": "^4.2.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.6.2",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --cache --fix --ext .js,.ts"
+    ],
+    "*.{css,md,yml,html}": "prettier --write"
+  }
+}

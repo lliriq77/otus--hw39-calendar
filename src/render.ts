@@ -41,14 +41,15 @@ export const render = async () => {
     });
 
     return;
-  } else if (route.match("/todolist")) {
+  } else if (route.match("/about")) {
+    return ((
+      document.getElementById("root") as HTMLElement
+    ).innerHTML = `<h2>${route}</h2>`);
+  } else if (route.match("/")) {
     return createTodos(
       document.getElementById("root") as HTMLElement,
       `<span>All Events</span>
      <button class='todos__button'>+</button>`
     );
-  } else
-    return ((
-      document.getElementById("root") as HTMLElement
-    ).innerHTML = `<h2>${route}</h2>`);
+  }
 };

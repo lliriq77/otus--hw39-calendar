@@ -70,8 +70,7 @@ export const createTodos = function createTodos(
       .forEach((key) => {
         const currentEv = store.getState().events[key];
         const tr = document.createElement("tr");
-        tr.innerHTML = `
-                    <td>${new Date(currentEv.date).getDate()} ${
+        tr.innerHTML = `<td>${new Date(currentEv.date).getDate()} ${
           store.getState().months[new Date(currentEv.date).getMonth()]
         } ${new Date(currentEv.date).getHours()} : ${new Date(
           currentEv.date
@@ -237,8 +236,7 @@ export const editEv = function editEv(el: HTMLElement, key: string) {
                 <span>Date</span>
                 <input class='edit__date' value='${
                   store.getState().events[key].date
-                }
-            '>
+                }'>
             <p>Status</p>        
             <select>
                 <option selected disabled>Choose status</option>
@@ -262,6 +260,7 @@ export const editEv = function editEv(el: HTMLElement, key: string) {
         .value,
       status: (el.querySelector("select") as HTMLSelectElement).value,
     };
+    console.log(el.querySelector(".edit__date"));
     const updates: { [key: string]: typeof evData } = {};
 
     updates[`/events/${key}`] = evData;
